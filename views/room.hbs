@@ -34,7 +34,7 @@
                 <button onClick="upVote(`{{this.msg_id}}`, {{this.vote}})">Up</button>
                 {{this.vote}}
                 <button onClick="downVote(`{{this.msg_id}}`, {{this.vote}})">Down</button>
-                <button onClick="deleteMsg()">Del</button>
+                <button onClick="deleteMsg()">Delete</button>
                 <button onClick="editMsg()">Edit</button>
             </div>
         {{/each}}
@@ -124,12 +124,12 @@
                         editBtn.innerHTML = "<a href="+ link + ">Edit</a>"
                         var del = document.createElement("button");
                         del.addEventListener("click", () => { deleteMsg(msgJson[j].msg_id) });
-                        del.innerText = "DEL"
+                        del.innerText = "Delete";
                         
                     }
 
                     edit.addEventListener("click", () => { editMsg() });
-                    edit.innerText = "EDIT";
+                    edit.innerText = "Edit";
                     postBox.appendChild(upV);
                     postBox.appendChild(vote);
                     postBox.appendChild(downV);
